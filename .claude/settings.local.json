@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(del App.css)",
+      "Bash(del componentsNavbar.css)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
