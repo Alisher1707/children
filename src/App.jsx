@@ -14,6 +14,8 @@ import UserData from './pages/UserData';
 import BookSelection from './pages/BookSelection';
 import Settings from './pages/Settings';
 import EditProfile from './pages/EditProfile';
+import UserAgreement from './pages/UserAgreement';
+import AppLanguage from './pages/AppLanguage';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
         <Route path="/book-selection" element={<BookSelection />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/edit-profile" element={<EditProfile />} />
+        <Route path="/agreement" element={<UserAgreement />} />
+        <Route path="/app-language" element={<AppLanguage />} />
       </Routes>
     </BrowserRouter>
   );

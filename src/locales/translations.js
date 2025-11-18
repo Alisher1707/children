@@ -149,6 +149,16 @@ export const translations = {
       namePlaceholder: "Ismingiz",
       surnamePlaceholder: "Familiyangiz",
       saveButton: "Saqlash"
+    },
+    userAgreement: {
+      title: "Foydalanish shartlari"
+    },
+    appLanguage: {
+      title: "Dastur tili",
+      uzbek: "O'zbekcha",
+      russian: "Русский",
+      english: "English",
+      saveButton: "Saqlash"
     }
   },
   ru: {
@@ -301,6 +311,16 @@ export const translations = {
       namePlaceholder: "Ваше имя",
       surnamePlaceholder: "Фамилия",
       saveButton: "Сохранить"
+    },
+    userAgreement: {
+      title: "Пользовательское соглашение"
+    },
+    appLanguage: {
+      title: "Язык программы",
+      uzbek: "O'zbekcha",
+      russian: "Русский",
+      english: "English",
+      saveButton: "Сохранить"
     }
   },
   en: {
@@ -452,6 +472,16 @@ export const translations = {
       title: "Change my data",
       namePlaceholder: "Your name",
       surnamePlaceholder: "Surname",
+      saveButton: "Save"
+    },
+    userAgreement: {
+      title: "User agreement"
+    },
+    appLanguage: {
+      title: "App language",
+      uzbek: "O'zbekcha",
+      russian: "Русский",
+      english: "English",
       saveButton: "Save"
     }
   }
