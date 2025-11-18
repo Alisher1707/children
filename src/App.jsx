@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import LanguageSection from './components/LanguageSection';
 import VoicePenSection from './components/VoicePenSection';
 import BenefitsSection from './components/BenefitsSection';
+import AudioCoursesSection from './components/AudioCoursesSection';
+import TestimonialsSection from './components/TestimonialsSection';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <LanguageSection />
         <VoicePenSection />
         <BenefitsSection />
+        <AudioCoursesSection />
+        <TestimonialsSection />
       </main>
     </div>
   );

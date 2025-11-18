@@ -124,12 +124,22 @@ const BenefitsSection = () => {
                   <div className="mb-3" style={{ color: benefit.iconColor }}>
                     <div className="w-12 h-12">{benefit.icon}</div>
                   </div>
-                  <h3 className="text-base font-bold mb-2" style={{ color: benefit.iconColor }}>
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-700 text-xs leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  {benefit.id === 2 ? (
+                    <h3 className="text-base mb-2">
+                      <span className="font-bold" style={{ color: benefit.iconColor }}>{benefit.title}</span>
+                      {' '}
+                      <span className="text-gray-700 font-normal">{t('benefits.card2Title2')}</span>
+                    </h3>
+                  ) : (
+                    <h3 className="text-base font-bold mb-2" style={{ color: benefit.iconColor }}>
+                      {benefit.title}
+                    </h3>
+                  )}
+                  {benefit.id !== 2 && (
+                    <p className="text-gray-700 text-xs leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}

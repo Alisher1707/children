@@ -62,14 +62,36 @@ export const translations = {
       subtitle: "Barcha yoshdagi shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
       card1Title: "Farzandlari va nevaralari ko'p bo'lgan oilalar",
       card1Desc: "uchun atiga bitta to'plam orqali ko'plab bolalar o'rganishi mumkin",
-      card2Title: "Qayta va qayta kursga pul to'lab charchagan ota-onalar",
-      card2Desc: "uchun",
+      card2Title: "Qayta va qayta kursga pul",
+      card2Title2: "to'lab charchagan ota-onalar uchun",
+      card2Desc: "",
       card3Title: "Qayta va qayta kurslarga pul",
       card3Desc: "sarflashni yechimi qidirganlar uchun",
       card4Title: "Jahon Tilllarni til egalarigan",
       card4Desc: "(native speaker) o'rganmoqchi bo'lganlar uchun.",
       card5Title: "Qiziqarli o'yinlar, mashqlar hamda ashulalar",
       card5Desc: "yordamida o'rganishini hohlo'vchilar uchun."
+    },
+    audioCourses: {
+      title: "AUDIO KURS KIMLAR UCHUN FOYDALI?",
+      benefit1: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
+      benefit2: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
+      benefit3: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
+      benefit4: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
+      discountTitle: "SIZNING CHEGIRMANGIZ",
+      discountStart: "Chegirma boshlandi",
+      discountEnd: "Chegirma tugaydi",
+      priceLabel: "Audio kurs narxi",
+      formTitle: "BUYURTMA BERISH UCHUN FORMANI TO'LDIRING",
+      namePlaceholder: "Ism",
+      phonePlaceholder: "Telefon",
+      agreement: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz",
+      submitButton: "Buyurtma berish"
+    },
+    testimonials: {
+      title: "NATIJALAR",
+      book1: "Children English book 1",
+      text1: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi"
     }
   },
   ru: {
@@ -135,14 +157,36 @@ export const translations = {
       subtitle: "Наши курсы полезны всем, кто интересуется этими языками",
       card1Title: "Семьи с большим количеством детей и внуков",
       card1Desc: "множество детей могут учиться с помощью одного набора",
-      card2Title: "Родители, уставшие от оплаты курсов",
-      card2Desc: "",
+      card2Title: "Родители,",
+      card2Title2: "уставшие от оплаты курсов",
+      card2Desc: "для",
       card3Title: "Тем, кто ищет решение расходов на курсы",
       card3Desc: "",
       card4Title: "Изучение мировых языков от носителей",
       card4Desc: "(native speaker)",
       card5Title: "Интересные игры, упражнения и песни",
       card5Desc: "для тех, кто хочет учиться через них."
+    },
+    audioCourses: {
+      title: "ДЛЯ КОГО ПОЛЕЗЕН АУДИО КУРС?",
+      benefit1: "Наши курсы полезны всем, кто интересуется этими языками",
+      benefit2: "Наши курсы полезны всем, кто интересуется этими языками",
+      benefit3: "Наши курсы полезны всем, кто интересуется этими языками",
+      benefit4: "Наши курсы полезны всем, кто интересуется этими языками",
+      discountTitle: "ВАША СКИДКА",
+      discountStart: "Скидка началась",
+      discountEnd: "Скидка заканчивается",
+      priceLabel: "Цена аудио курса",
+      formTitle: "ЗАПОЛНИТЕ ФОРМУ ДЛЯ ЗАКАЗА",
+      namePlaceholder: "Имя",
+      phonePlaceholder: "Телефон",
+      agreement: "Наши курсы полезны всем, кто интересуется этими языками",
+      submitButton: "Заказать"
+    },
+    testimonials: {
+      title: "РЕЗУЛЬТАТЫ",
+      book1: "Children English book 1",
+      text1: "Наши курсы полезны всем, кто интересуется этими языками"
     }
   },
   en: {
@@ -208,14 +252,36 @@ export const translations = {
       subtitle: "Our courses are useful for everyone interested in these languages",
       card1Title: "Families with many children and grandchildren",
       card1Desc: "many children can learn with just one set",
-      card2Title: "Parents tired of paying for courses",
-      card2Desc: "",
+      card2Title: "Parents",
+      card2Title2: "tired of paying for courses",
+      card2Desc: "for",
       card3Title: "Those looking for solution to course expenses",
       card3Desc: "",
       card4Title: "Learning world languages from native speakers",
       card4Desc: "(native speaker)",
       card5Title: "Interesting games, exercises and songs",
       card5Desc: "for those who want to learn through them."
+    },
+    audioCourses: {
+      title: "WHO BENEFITS FROM AUDIO COURSE?",
+      benefit1: "Our courses are useful for everyone interested in these languages",
+      benefit2: "Our courses are useful for everyone interested in these languages",
+      benefit3: "Our courses are useful for everyone interested in these languages",
+      benefit4: "Our courses are useful for everyone interested in these languages",
+      discountTitle: "YOUR DISCOUNT",
+      discountStart: "Discount started",
+      discountEnd: "Discount ends",
+      priceLabel: "Audio course price",
+      formTitle: "FILL OUT THE FORM TO ORDER",
+      namePlaceholder: "Name",
+      phonePlaceholder: "Phone",
+      agreement: "Our courses are useful for everyone interested in these languages",
+      submitButton: "Order now"
+    },
+    testimonials: {
+      title: "RESULTS",
+      book1: "Children English book 1",
+      text1: "Our courses are useful for everyone interested in these languages"
     }
   }
 };

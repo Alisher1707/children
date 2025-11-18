@@ -19,7 +19,6 @@ const VoicePenSection = () => {
         </svg>
       ),
       title: t('voicePen.step1Title'),
-      description: t('voicePen.step1Desc'),
       bgColor: 'linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%)'
     },
     {
@@ -30,7 +29,6 @@ const VoicePenSection = () => {
         </svg>
       ),
       title: t('voicePen.step2Title'),
-      description: t('voicePen.step2Desc'),
       bgColor: 'linear-gradient(135deg, #6B8DD6 0%, #4A6FA5 100%)'
     },
     {
@@ -42,7 +40,6 @@ const VoicePenSection = () => {
         </svg>
       ),
       title: t('voicePen.step3Title'),
-      description: t('voicePen.step3Desc'),
       bgColor: 'linear-gradient(135deg, #B24BF3 0%, #8E44AD 100%)'
     }
   ];
@@ -143,14 +140,9 @@ const VoicePenSection = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold mb-0.5">
+                  <h3 className="text-sm font-bold">
                     {step.id}. {step.title}
                   </h3>
-                  {step.description && (
-                    <p className="text-white text-opacity-90 text-xs">
-                      {step.description}
-                    </p>
-                  )}
                 </div>
               </div>
             </div>
