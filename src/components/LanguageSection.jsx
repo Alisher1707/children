@@ -74,45 +74,45 @@ const LanguageSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+    <section className="py-20 px-4 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
           {/* Left side - Title, flags and button */}
-          <div className="flex flex-col items-start scale-90">
-            <h2 className="text-5xl font-bold mb-2" style={{ color: '#5B4891' }}>
+          <div className="flex flex-col items-start flex-1">
+            <h2 className="text-5xl font-bold mb-3" style={{ color: '#5B4891' }}>
               {t('languageSection.title')}
             </h2>
-            <p className="text-gray-600 mb-6">{t('languageSection.subtitle')}</p>
+            <p className="text-gray-600 text-lg mb-8">{t('languageSection.subtitle')}</p>
 
             {/* Language flags grid */}
-            <div className="grid grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-4 gap-5 mb-10">
               {languages.map((lang, index) => (
-                <div key={index} className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-200">
+                <div key={index} className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-200 shadow-md">
                   <img src={lang.flag} alt={lang.name} className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
 
             {/* Button */}
-            <button className="font-semibold px-8 py-3 rounded-full text-white text-sm transition-all shadow-lg" style={{ backgroundColor: '#7B5BA6' }}>
+            <button className="font-semibold px-10 py-3.5 rounded-full text-white text-base transition-all shadow-lg hover:shadow-xl" style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
               {t('languageSection.orderButton')}
             </button>
           </div>
 
           {/* Right side - Book cards */}
-          <div className="flex gap-6 scale-90">
+          <div className="flex gap-6 flex-1 justify-end">
             {books.slice(0, 3).map((book) => (
               <div
                 key={book.id}
-                className="rounded-3xl p-6 flex flex-col items-center shadow-lg transition-transform hover:scale-105"
-                style={{ backgroundColor: book.bgColor, width: '240px' }}
+                className="rounded-3xl p-7 flex flex-col items-center shadow-lg transition-transform hover:scale-105"
+                style={{ backgroundColor: book.bgColor, width: '260px' }}
               >
-                <div className="mb-4">
-                  <img src={book.image} alt={book.title} className="w-40 h-48 object-contain" />
+                <div className="mb-5">
+                  <img src={book.image} alt={book.title} className="w-44 h-52 object-contain" />
                 </div>
-                <h3 className="font-bold text-lg text-gray-800 mb-1">{book.title}</h3>
-                <p className="text-sm text-gray-600">{book.subtitle}</p>
+                <h3 className="font-bold text-xl text-gray-800 mb-1">{book.title}</h3>
+                <p className="text-base text-gray-600">{book.subtitle}</p>
               </div>
             ))}
           </div>

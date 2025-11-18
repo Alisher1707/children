@@ -11,7 +11,7 @@ const AudioCoursesSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-white to-purple-50">
+    <section className="py-20 px-4 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl font-bold mb-16 text-center" style={{ color: '#5B4891' }}>
@@ -159,7 +159,8 @@ const AudioCoursesSection = () => {
                 <div className="pt-10">
                   <button
                     type="submit"
-                    className="bg-purple-600 text-white px-10 py-2.5 rounded-full font-semibold hover:bg-purple-700 transition-colors text-base"
+                    className="text-white px-10 py-2.5 rounded-full font-semibold transition-colors text-base"
+                    style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}
                   >
                     {t('audioCourses.submitButton')}
                   </button>

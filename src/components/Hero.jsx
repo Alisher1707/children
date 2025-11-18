@@ -20,7 +20,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="py-16 px-4"
+    <section className="py-20 px-4"
       style={{
         background: 'linear-gradient(135deg, #6B4E9B 0%, #8B5A9E 50%, #9D6B9E 100%)'
       }}>
