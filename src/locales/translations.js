@@ -92,6 +92,13 @@ export const translations = {
       title: "NATIJALAR",
       book1: "Children English book 1",
       text1: "Barcha yoshdaki shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi"
+    },
+    footer: {
+      home: "Bosh sahifa",
+      products: "Loyihalar",
+      services: "Xizmatlar",
+      contacts: "Kontaktlar",
+      socialText: "Mы в соцсетях:"
     }
   },
   ru: {
@@ -187,6 +194,13 @@ export const translations = {
       title: "РЕЗУЛЬТАТЫ",
       book1: "Children English book 1",
       text1: "Наши курсы полезны всем, кто интересуется этими языками"
+    },
+    footer: {
+      home: "Главная",
+      products: "Проекты",
+      services: "Сервисы",
+      contacts: "Контакты",
+      socialText: "Mы в соцсетях:"
     }
   },
   en: {
@@ -282,6 +296,13 @@ export const translations = {
       title: "RESULTS",
       book1: "Children English book 1",
       text1: "Our courses are useful for everyone interested in these languages"
+    },
+    footer: {
+      home: "Home",
+      products: "Projects",
+      services: "Services",
+      contacts: "Contacts",
+      socialText: "Follow us:"
     }
   }
 };

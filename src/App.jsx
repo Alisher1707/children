@@ -5,6 +5,7 @@ import VoicePenSection from './components/VoicePenSection';
 import BenefitsSection from './components/BenefitsSection';
 import AudioCoursesSection from './components/AudioCoursesSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <AudioCoursesSection />
         <TestimonialsSection />
       </main>
+      <Footer />
     </div>
   );
 }
