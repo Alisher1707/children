@@ -20,6 +20,17 @@ export const translations = {
     },
     main: {
       title: "Bolalar uchun loyiha"
+    },
+    hero: {
+      title: "ANGELFACES TO'PLAMINI",
+      discount: "10% CHEGIRMA",
+      subtitle: "BILAN SOTIB OLING.",
+      description: "Ingliz, Rus, Xitoy, Fransuz, Kares, Ispan, O'zbek va Arab tillarini tez va oson o'rganing!",
+      button: "Buyurtma berish",
+      delivery: {
+        title: "Buyurtmangiz 48 soatda",
+        subtitle: "yetib bormasa tekinga olasiz."
+      }
     }
   },
   ru: {
@@ -43,6 +54,17 @@ export const translations = {
     },
     main: {
       title: "Проект для детей"
+    },
+    hero: {
+      title: "НАБОР ANGELFACES",
+      discount: "СКИДКА 10%",
+      subtitle: "КУПИТЕ С.",
+      description: "Быстро и легко изучайте английский, русский, китайский, французский, корейский, испанский, узбекский и арабский языки!",
+      button: "Заказать",
+      delivery: {
+        title: "Ваш заказ за 48 часов",
+        subtitle: "не прибудет - получите бесплатно."
+      }
     }
   },
   en: {
@@ -66,6 +88,17 @@ export const translations = {
     },
     main: {
       title: "Project for children"
+    },
+    hero: {
+      title: "ANGELFACES COLLECTION",
+      discount: "10% DISCOUNT",
+      subtitle: "BUY WITH.",
+      description: "Learn English, Russian, Chinese, French, Korean, Spanish, Uzbek and Arabic quickly and easily!",
+      button: "Order now",
+      delivery: {
+        title: "Your order in 48 hours",
+        subtitle: "or get it for free."
+      }
     }
   }
 };
