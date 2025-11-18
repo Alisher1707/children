@@ -99,6 +99,56 @@ export const translations = {
       services: "Xizmatlar",
       contacts: "Kontaktlar",
       socialText: "Mы в соцсетях:"
+    },
+    login: {
+      title: "Вход",
+      welcome: "Добро пожаловать",
+      welcomeTo: "на AngelsBook!",
+      phoneLabel: "Введите номер телефона",
+      or: "Или",
+      googleButton: "Войти через Google",
+      notRegistered: "Если вы не зарегистрированы пройдите регистрацию",
+      registerButton: "Регистрация",
+      continueButton: "Продолжить"
+    },
+    smsVerification: {
+      title: "SMS kodini kiriting",
+      sentTo: "+998 90 9** **89 raqamiga SMS kod yuborildi",
+      resendIn: "Qayta yuborish",
+      loginButton: "Kirish"
+    },
+    phoneRegistration: {
+      title: "Telefon raqamni kiriting",
+      description: "+998 90 9** **89 raqamiga SMS kod yuboriladi",
+      sendButton: "SMS-kod yuborish"
+    },
+    userData: {
+      title: "Ma'lumotlaringiz",
+      namePlaceholder: "Ismingiz",
+      surnamePlaceholder: "Familiyangiz",
+      continueButton: "Davom etish"
+    },
+    bookSelection: {
+      title: "Kitob tanlang",
+      home: "Bosh sahifa",
+      notes: "Eslatmalar",
+      settings: "Sozlamalar"
+    },
+    settings: {
+      title: "Sozlamalar",
+      editProfile: "Ma'lumotlarimni o'zgartirish",
+      favorites: "Sevimlilar",
+      language: "Dastur tili",
+      agreement: "Foydalanish shartlari",
+      about: "Dastur haqida",
+      home: "Bosh sahifa",
+      notes: "Eslatmalar"
+    },
+    editProfile: {
+      title: "Ma'lumotlarimni o'zgartirish",
+      namePlaceholder: "Ismingiz",
+      surnamePlaceholder: "Familiyangiz",
+      saveButton: "Saqlash"
     }
   },
   ru: {
@@ -201,6 +251,56 @@ export const translations = {
       services: "Сервисы",
       contacts: "Контакты",
       socialText: "Mы в соцсетях:"
+    },
+    login: {
+      title: "Вход",
+      welcome: "Добро пожаловать",
+      welcomeTo: "на AngelsBook!",
+      phoneLabel: "Введите номер телефона",
+      or: "Или",
+      googleButton: "Войти через Google",
+      notRegistered: "Если вы не зарегистрированы пройдите регистрацию",
+      registerButton: "Регистрация",
+      continueButton: "Продолжить"
+    },
+    smsVerification: {
+      title: "Введите код из СМС",
+      sentTo: "На номер +998 90 9** **89 отправлен смс с кодом",
+      resendIn: "Повторно отправить через",
+      loginButton: "Войти"
+    },
+    phoneRegistration: {
+      title: "Введите номер телефона",
+      description: "На номер +998 90 9** **89 отправлен смс с кодом",
+      sendButton: "Отправить SMS-код"
+    },
+    userData: {
+      title: "Ваши данные",
+      namePlaceholder: "Ваше имя",
+      surnamePlaceholder: "Фамилия",
+      continueButton: "Продолжить"
+    },
+    bookSelection: {
+      title: "Выберите книгу",
+      home: "Главная",
+      notes: "Заметки",
+      settings: "Настройки"
+    },
+    settings: {
+      title: "Настройки",
+      editProfile: "Изменить мои данные",
+      favorites: "Favorites",
+      language: "Язык программы",
+      agreement: "Пользовательское соглашение",
+      about: "О программе",
+      home: "Главная",
+      notes: "Заметки"
+    },
+    editProfile: {
+      title: "Изменить мои данные",
+      namePlaceholder: "Ваше имя",
+      surnamePlaceholder: "Фамилия",
+      saveButton: "Сохранить"
     }
   },
   en: {
@@ -303,6 +403,56 @@ export const translations = {
       services: "Services",
       contacts: "Contacts",
       socialText: "Follow us:"
+    },
+    login: {
+      title: "Sign In",
+      welcome: "Welcome",
+      welcomeTo: "to AngelsBook!",
+      phoneLabel: "Enter phone number",
+      or: "Or",
+      googleButton: "Sign in with Google",
+      notRegistered: "If you are not registered, please register",
+      registerButton: "Register",
+      continueButton: "Continue"
+    },
+    smsVerification: {
+      title: "Enter SMS code",
+      sentTo: "SMS with code sent to +998 90 9** **89",
+      resendIn: "Resend in",
+      loginButton: "Sign In"
+    },
+    phoneRegistration: {
+      title: "Enter phone number",
+      description: "SMS with code will be sent to +998 90 9** **89",
+      sendButton: "Send SMS code"
+    },
+    userData: {
+      title: "Your data",
+      namePlaceholder: "Your name",
+      surnamePlaceholder: "Surname",
+      continueButton: "Continue"
+    },
+    bookSelection: {
+      title: "Select book",
+      home: "Home",
+      notes: "Notes",
+      settings: "Settings"
+    },
+    settings: {
+      title: "Settings",
+      editProfile: "Change my data",
+      favorites: "Favorites",
+      language: "App language",
+      agreement: "User agreement",
+      about: "About app",
+      home: "Home",
+      notes: "Notes"
+    },
+    editProfile: {
+      title: "Change my data",
+      namePlaceholder: "Your name",
+      surnamePlaceholder: "Surname",
+      saveButton: "Save"
     }
   }
 };

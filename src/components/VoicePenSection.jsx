@@ -45,24 +45,24 @@ const VoicePenSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-purple-50 to-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Voice Pen Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 mb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 mb-12 lg:mb-20">
           {/* Left side - Image */}
-          <div className="relative flex-shrink-0 flex items-start gap-0">
+          <div className="relative flex-shrink-0 flex items-start gap-0 scale-75 sm:scale-90 lg:scale-100">
             {/* Video button */}
-            <button className="z-20 bg-purple-700 text-white rounded-full flex items-center gap-3 shadow-lg hover:bg-purple-800 transition-all mt-24" style={{ backgroundColor: '#6B4FA0', width: '240px', height: '60px', paddingLeft: '28px' }}>
+            <button className="z-20 bg-purple-700 text-white rounded-full flex items-center gap-2 sm:gap-3 shadow-lg hover:bg-purple-800 transition-all mt-16 sm:mt-24 px-4 sm:px-0" style={{ backgroundColor: '#6B4FA0', width: '200px', height: '50px', paddingLeft: '20px' }}>
               <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
                 <svg className="w-5 h-5 text-purple-700 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </div>
-              <span className="text-base font-medium">{t('voicePen.videoButton')}</span>
+              <span className="text-sm sm:text-base font-medium">{t('voicePen.videoButton')}</span>
             </button>
 
             {/* Circular background with concentric circles */}
-            <div className="w-[420px] h-[420px] rounded-full flex items-center justify-center relative -ml-8" style={{ background: 'linear-gradient(135deg, #E98F8E 0%, #EEAE8C 100%)' }}>
+            <div className="w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full flex items-center justify-center relative -ml-6 sm:-ml-8" style={{ background: 'linear-gradient(135deg, #E98F8E 0%, #EEAE8C 100%)' }}>
               {/* Wave effect */}
               <div className="absolute inset-0 rounded-full flex items-center justify-center">
                 <svg className="w-full h-full" viewBox="0 0 380 380">
@@ -87,44 +87,44 @@ const VoicePenSection = () => {
               </div>
 
               {/* Voice pen image */}
-              <div className="z-10 relative -mt-24 -ml-8">
-                <img src="/images/ruchka.png" alt={t('voicePen.imagePlaceholder')} className="w-[420px] h-[420px] object-contain drop-shadow-2xl transform -rotate-[18deg]" />
+              <div className="z-10 relative -mt-16 sm:-mt-20 lg:-mt-24 -ml-6 sm:-ml-8">
+                <img src="/images/ruchka.png" alt={t('voicePen.imagePlaceholder')} className="w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transform -rotate-[18deg]" />
               </div>
             </div>
           </div>
 
           {/* Right side - Text and features */}
-          <div className="flex flex-col items-start flex-1">
-            <h2 className="text-5xl font-bold mb-8" style={{ color: '#5B4891' }}>
+          <div className="flex flex-col items-center lg:items-start flex-1 text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8" style={{ color: '#5B4891' }}>
               {t('voicePen.title')}
             </h2>
 
             {/* Features list */}
-            <div className="space-y-5 mb-10">
+            <div className="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
               {features.map((feature) => (
-                <div key={feature.id} className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <div key={feature.id} className="flex items-start gap-3 sm:gap-4 justify-center lg:justify-start">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <p className="text-gray-700 text-xl">{feature.text}</p>
+                  <p className="text-gray-700 text-base sm:text-lg lg:text-xl">{feature.text}</p>
                 </div>
               ))}
             </div>
 
             {/* Button */}
-            <button className="text-white px-10 py-3.5 rounded-full font-semibold text-base shadow-lg transition-all" style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
+            <button className="text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-semibold text-sm sm:text-base shadow-lg transition-all" style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
               {t('voicePen.orderButton')}
             </button>
           </div>
         </div>
 
         {/* Steps Cards Section */}
-        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {steps.map((step) => (
             <div
               key={step.id}
-              className="rounded-3xl p-6 text-white shadow-xl relative overflow-hidden"
-              style={{ background: step.bgColor, width: '310px', height: '150px' }}
+              className="rounded-3xl p-5 sm:p-6 text-white shadow-xl relative overflow-hidden"
+              style={{ background: step.bgColor, minHeight: '140px' }}
             >
               {/* Decorative pattern */}
               <div className="absolute bottom-0 right-0 opacity-10">
@@ -140,7 +140,7 @@ const VoicePenSection = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-base font-bold">
+                  <h3 className="text-sm sm:text-base font-bold">
                     {step.id}. {step.title}
                   </h3>
                 </div>

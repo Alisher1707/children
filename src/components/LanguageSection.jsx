@@ -74,39 +74,43 @@ const LanguageSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-16">
 
           {/* Left side - Title, flags and button */}
-          <div className="flex flex-col items-start flex-1">
-            <h2 className="text-5xl font-bold mb-3" style={{ color: '#5B4891' }}>
+          <div className="flex flex-col items-start w-full lg:w-auto lg:flex-1">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 leading-tight" style={{ color: '#5B4891' }}>
               {t('languageSection.title')}
             </h2>
-            <p className="text-gray-600 text-lg mb-8">{t('languageSection.subtitle')}</p>
+            <p className="text-gray-600 text-base sm:text-lg mb-8">{t('languageSection.subtitle')}</p>
 
-            {/* Language flags grid */}
-            <div className="grid grid-cols-4 gap-5 mb-10">
+            {/* Language flags grid - 4 columns, 2 rows */}
+            <div className="grid grid-cols-4 gap-4 sm:gap-5 mb-10 w-full max-w-xs">
               {languages.map((lang, index) => (
-                <div key={index} className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-200 shadow-md">
+                <div
+                  key={index}
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-gray-200 shadow-md hover:shadow-lg transition-shadow"
+                >
                   <img src={lang.flag} alt={lang.name} className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
 
             {/* Button */}
-            <button className="font-semibold px-10 py-3.5 rounded-full text-white text-base transition-all shadow-lg hover:shadow-xl" style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
+            <button className="font-semibold px-10 py-3.5 rounded-full text-white text-base transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
               {t('languageSection.orderButton')}
             </button>
           </div>
 
-          {/* Right side - Book cards */}
-          <div className="flex gap-6 flex-1 justify-end">
+          {/* Right side - Book cards (only first 3 books) */}
+          <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 w-full lg:w-auto lg:flex-shrink-0">
             {books.slice(0, 3).map((book) => (
               <div
                 key={book.id}
-                className="rounded-3xl p-7 flex flex-col items-center shadow-lg transition-transform hover:scale-105"
-                style={{ backgroundColor: book.bgColor, width: '260px' }}
+                className="rounded-3xl p-7 flex flex-col items-center shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: book.bgColor, width: '100%', maxWidth: '260px' }}
               >
                 <div className="mb-5">
                   <img src={book.image} alt={book.title} className="w-44 h-52 object-contain" />

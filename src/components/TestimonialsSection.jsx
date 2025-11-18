@@ -47,26 +47,26 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-white mb-20">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white mb-12 sm:mb-20">
       <div className="max-w-6xl mx-auto">
         {/* Header with navigation */}
-        <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-[#8F2ADC] to-[#D351B9] bg-clip-text text-transparent">
+        <div className="flex justify-between items-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#8F2ADC] to-[#D351B9] bg-clip-text text-transparent">
             {t('testimonials.title')}
           </h2>
 
           {/* Navigation buttons */}
-          <div className="flex gap-3">
+          <div className="flex gap-2 sm:gap-3">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 flex items-center justify-center hover:opacity-80 transition-opacity relative"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:opacity-80 transition-opacity relative"
               style={{
                 background: 'linear-gradient(white, white) padding-box, linear-gradient(to right, #8F2ADC, #D351B9) border-box',
                 border: '2px solid transparent',
                 borderRadius: '50%'
               }}
             >
-              <svg className="w-6 h-6" fill="none" stroke="url(#gradient)" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="url(#gradient)" viewBox="0 0 24 24">
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="#8F2ADC" />
@@ -78,10 +78,10 @@ const TestimonialsSection = () => {
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
               style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -89,27 +89,27 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {getVisibleTestimonials().map((testimonial, index) => (
             <div
               key={`${testimonial.id}-${index}`}
-              className="bg-purple-50 rounded-2xl p-6 transition-all duration-300 min-h-[200px]"
+              className="bg-purple-50 rounded-2xl p-5 sm:p-6 transition-all duration-300 min-h-[180px] sm:min-h-[200px]"
             >
               {/* User info */}
-              <div className="flex items-start gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-gray-300 overflow-hidden flex-shrink-0">
-                  <div className="w-full h-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center text-purple-700 font-bold text-lg">
+              <div className="flex items-start gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 overflow-hidden flex-shrink-0">
+                  <div className="w-full h-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center text-purple-700 font-bold text-base sm:text-lg">
                     {testimonial.name.charAt(0)}
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">{testimonial.name}</h3>
-                  <p className="text-sm text-purple-600">{testimonial.book}</p>
+                  <h3 className="font-bold text-sm sm:text-base text-gray-800">{testimonial.name}</h3>
+                  <p className="text-xs sm:text-sm text-purple-600">{testimonial.book}</p>
                 </div>
               </div>
 
               {/* Review text */}
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
                 {testimonial.text}
               </p>
             </div>

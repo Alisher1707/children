@@ -11,22 +11,22 @@ const AudioCoursesSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-purple-50">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
-        <h2 className="text-3xl font-bold mb-16 text-center" style={{ color: '#5B4891' }}>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-10 sm:mb-16 text-center" style={{ color: '#5B4891' }}>
           {t('audioCourses.title')}
         </h2>
 
         {/* Benefits with wavy line */}
-        <div className="relative mb-20">
-          {/* SVG Wave Line */}
-          <svg className="w-full h-32 absolute top-0 left-0" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <div className="relative mb-12 sm:mb-20">
+          {/* SVG Wave Line - hidden on mobile */}
+          <svg className="hidden md:block w-full h-32 absolute top-0 left-0" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,60 Q150,20 300,60 T600,60 T900,60 T1200,60" fill="none" stroke="#D0D0D0" strokeWidth="2"/>
           </svg>
 
           {/* Benefits badges */}
-          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8 pt-8">
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 pt-4 sm:pt-8">
             {benefits.map((benefit, index) => (
               <div key={benefit.id} className="flex flex-col items-center">
                 {/* Badge */}
@@ -63,77 +63,77 @@ const AudioCoursesSection = () => {
         </div>
 
         {/* Bottom Cards */}
-        <div className="flex flex-col md:flex-row gap-6 max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 max-w-5xl mx-auto">
           {/* Left Card - Discount */}
-          <div className="md:w-[58%] rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between min-h-[400px]" style={{ backgroundColor: '#c4e1f3' }}>
+          <div className="md:w-[58%] rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between min-h-[350px] sm:min-h-[400px]" style={{ backgroundColor: '#c4e1f3' }}>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-4" style={{ color: '#5B4891' }}>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4" style={{ color: '#5B4891' }}>
                 {t('audioCourses.discountTitle')}
-                <span className="text-5xl ml-2" style={{ color: '#FF6B6B' }}>10%</span>
+                <span className="text-3xl sm:text-5xl ml-2" style={{ color: '#FF6B6B' }}>10%</span>
               </h3>
 
-              <p className="text-sm text-gray-600 mb-2">
+              <p className="text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
                 {t('audioCourses.discountStart')}: <span className="font-bold">25 mart</span>
               </p>
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6">
                 {t('audioCourses.discountEnd')}: <span className="font-bold">24 aprel</span>
               </p>
 
-              <p className="text-lg font-bold mb-2" style={{ color: '#5B4891' }}>
+              <p className="text-base sm:text-lg font-bold mb-2" style={{ color: '#5B4891' }}>
                 {t('audioCourses.priceLabel')}
               </p>
-              <p className="text-gray-400 line-through text-xl mb-1">
+              <p className="text-gray-400 line-through text-lg sm:text-xl mb-1">
                 1.200.000 so'm
               </p>
-              <p className="text-4xl font-bold" style={{ color: '#FF6B6B' }}>
+              <p className="text-2xl sm:text-4xl font-bold" style={{ color: '#FF6B6B' }}>
                 533.000 so'm
               </p>
             </div>
 
             {/* Book images */}
-            <div className="absolute bottom-0 right-0 w-80 h-64">
+            <div className="absolute bottom-0 right-0 w-48 h-40 sm:w-80 sm:h-64">
               {/* Pink background semi-circle from bottom-right corner */}
               <div className="absolute -bottom-12 -right-12 w-72 h-72 bg-pink-200 rounded-full opacity-40"></div>
 
               {/* Books positioned inside the semi-circle */}
-              <div className="absolute bottom-0 right-0 flex items-end -space-x-12">
+              <div className="absolute bottom-0 right-0 flex items-end -space-x-6 sm:-space-x-12 scale-75 sm:scale-100">
                 {/* Book 1 - Left */}
                 <img
                   src="/images/kitob-1.png"
                   alt="Book 1"
-                  className="w-28 h-36 object-contain transform rotate-[-30deg] z-10 drop-shadow-xl"
+                  className="w-20 h-28 sm:w-28 sm:h-36 object-contain transform rotate-[-30deg] z-10 drop-shadow-xl"
                 />
 
                 {/* Book 2 - Center (Main) */}
                 <img
                   src="/images/kitob-2.png"
                   alt="Book 2"
-                  className="w-36 h-44 object-contain transform rotate-[-18deg] z-20 drop-shadow-2xl mb-2"
+                  className="w-24 h-32 sm:w-36 sm:h-44 object-contain transform rotate-[-18deg] z-20 drop-shadow-2xl mb-2"
                 />
 
                 {/* Book 3 - Right */}
                 <img
                   src="/images/kitob-3.png"
                   alt="Book 3"
-                  className="w-28 h-36 object-contain transform rotate-[-10deg] z-10 drop-shadow-xl"
+                  className="w-20 h-28 sm:w-28 sm:h-36 object-contain transform rotate-[-10deg] z-10 drop-shadow-xl"
                 />
               </div>
             </div>
           </div>
 
           {/* Right Card - Form */}
-          <div className="md:w-[42%] rounded-3xl p-8 flex flex-col justify-between min-h-[400px]" style={{ backgroundColor: '#c4e1f3ff' }}>
+          <div className="md:w-[42%] rounded-3xl p-6 sm:p-8 flex flex-col justify-between min-h-[350px] sm:min-h-[400px]" style={{ backgroundColor: '#c4e1f3ff' }}>
             <div>
-              <h3 className="text-lg font-bold mb-6" style={{ color: '#5B4891' }}>
+              <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6" style={{ color: '#5B4891' }}>
                 {t('audioCourses.formTitle')}
               </h3>
 
-              <form className="space-y-4">
+              <form className="space-y-3 sm:space-y-4">
                 <div>
                   <input
                     type="text"
                     placeholder={t('audioCourses.namePlaceholder')}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
                   />
                 </div>
 
@@ -141,7 +141,7 @@ const AudioCoursesSection = () => {
                   <input
                     type="tel"
                     placeholder={t('audioCourses.phonePlaceholder')}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base"
                   />
                 </div>
 
@@ -151,15 +151,15 @@ const AudioCoursesSection = () => {
                     id="agreement"
                     className="mt-1"
                   />
-                  <label htmlFor="agreement" className="text-xs text-gray-600">
+                  <label htmlFor="agreement" className="text-xs sm:text-sm text-gray-600">
                     {t('audioCourses.agreement')}
                   </label>
                 </div>
 
-                <div className="pt-10">
+                <div className="pt-6 sm:pt-10">
                   <button
                     type="submit"
-                    className="text-white px-10 py-2.5 rounded-full font-semibold transition-colors text-base"
+                    className="text-white px-8 sm:px-10 py-2 sm:py-2.5 rounded-full font-semibold transition-colors text-sm sm:text-base"
                     style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}
                   >
                     {t('audioCourses.submitButton')}
