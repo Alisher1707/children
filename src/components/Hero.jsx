@@ -20,50 +20,44 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden rounded-[40px] shadow-xl"
+    <section className="py-16 px-4"
       style={{
-        background: 'linear-gradient(135deg, #6B4E9B 0%, #8B5A9E 50%, #9D6B9E 100%)',
-        maxWidth: '1200px',
-        height: '500px',
-        margin: '2rem auto'
+        background: 'linear-gradient(135deg, #6B4E9B 0%, #8B5A9E 50%, #9D6B9E 100%)'
       }}>
 
-      {/* Blue border glow effect */}
-      <div className="absolute inset-0 rounded-[40px] border-4 border-blue-400 opacity-50 pointer-events-none"></div>
-
-      <div className="relative px-10 py-10 flex h-full">
-        <div className="flex items-start justify-between flex-1 gap-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-between gap-12">
           {/* Left content */}
-          <div className="flex-1 max-w-lg z-10">
+          <div className="flex-1 z-10">
             {/* Discount badge */}
             <div className="inline-block mb-3">
               <img src="/svg/10% chegirma svg.svg" alt="10% chegirma" className="w-16 h-16" />
             </div>
 
             {/* Main heading */}
-            <h1 className="text-white text-3xl font-bold mb-2 leading-tight">
+            <h1 className="text-white text-4xl font-bold mb-3 leading-tight">
               {t('hero.title')}
             </h1>
 
-            <h2 className="text-3xl font-bold mb-3 leading-tight" style={{ color: '#FFD89C' }}>
+            <h2 className="text-4xl font-bold mb-4 leading-tight" style={{ color: '#FFD89C' }}>
               {t('hero.discount')} <span className="text-white">{t('hero.subtitle')}</span>
             </h2>
 
             {/* Description */}
-            <p className="text-white text-sm mb-5 leading-relaxed opacity-90">
+            <p className="text-white text-base mb-6 leading-relaxed opacity-90">
               {t('hero.description')}
             </p>
 
-            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start gap-5">
               {/* Button */}
-              <button className="font-semibold px-6 py-2.5 rounded-full text-sm transition-all shadow-lg" style={{ backgroundColor: '#C6E5F9', color: '#5D4592' }}>
+              <button className="font-semibold px-8 py-3 rounded-full text-base transition-all shadow-lg" style={{ backgroundColor: '#C6E5F9', color: '#5D4592' }}>
                 {t('hero.button')}
               </button>
 
               {/* Delivery info */}
-              <div className="flex items-center gap-3 border-2 border-white border-opacity-30 rounded-2xl px-4 py-2.5">
+              <div className="flex items-center gap-4 border-2 border-white border-opacity-30 rounded-2xl px-5 py-3">
                 <div className="flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M0 5h14v10H0z" opacity="0.8"/>
                     <path d="M2 7h8v1.5H2zm0 3h6v1.5H2z"/>
                     <path d="M14 9h2.5l2.5 3v3h-5z" opacity="0.8"/>
@@ -74,8 +68,8 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div className="text-white">
-                  <p className="font-bold text-sm">{t('hero.delivery.title')}</p>
-                  <p className="text-xs opacity-90">{t('hero.delivery.subtitle')}</p>
+                  <p className="font-bold text-base">{t('hero.delivery.title')}</p>
+                  <p className="text-sm opacity-90">{t('hero.delivery.subtitle')}</p>
                 </div>
               </div>
             </div>
