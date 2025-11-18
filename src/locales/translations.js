@@ -31,6 +31,45 @@ export const translations = {
         title: "Buyurtmangiz 48 soatda",
         subtitle: "yetib bormasa tekinga olasiz."
       }
+    },
+    languageSection: {
+      title: "8ta tilda",
+      subtitle: "Ingliz tilini o'rganing",
+      orderButton: "Buyurtma berish",
+      bookTitle: "Bolalar ingliz tili",
+      book1: "KITOB 1",
+      book2: "KITOB 2",
+      book3: "KITOB 3"
+    },
+    voicePen: {
+      title: "OVOZ CHIQARUVCHI RUCHKA",
+      feature1: "Sifatli 3D audio orqali",
+      feature2: "Hech qanday grammatik qoidalarsiz",
+      feature3: "So`z yodlashlarsiz",
+      feature4: "Istalgan joyda va istalgan vaqtda",
+      orderButton: "Buyurtma berish",
+      videoButton: "Videosini ko'rish",
+      imagePlaceholder: "Ovoz chiqaruvchi ruchka",
+      step1Title: "Saytda buyurtma qoldiring",
+      step1Desc: "",
+      step2Title: "Biz siz bilan bog'lanamiz",
+      step2Desc: "",
+      step3Title: "Manzilingizga 48 soat ichida yetkazib beramiz",
+      step3Desc: ""
+    },
+    benefits: {
+      title: "ROBOT USTOZ KIMLAR UCHUN FOYDALI.",
+      subtitle: "Barcha yoshdagi shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
+      card1Title: "Farzandlari va nevaralari ko'p bo'lgan oilalar",
+      card1Desc: "uchun atiga bitta to'plam orqali ko'plab bolalar o'rganishi mumkin",
+      card2Title: "Qayta va qayta kursga pul to'lab charchagan ota-onalar",
+      card2Desc: "uchun",
+      card3Title: "Qayta va qayta kurslarga pul",
+      card3Desc: "sarflashni yechimi qidirganlar uchun",
+      card4Title: "Jahon Tilllarni til egalarigan",
+      card4Desc: "(native speaker) o'rganmoqchi bo'lganlar uchun.",
+      card5Title: "Qiziqarli o'yinlar, mashqlar hamda ashulalar",
+      card5Desc: "yordamida o'rganishini hohlo'vchilar uchun."
     }
   },
   ru: {
@@ -65,6 +104,45 @@ export const translations = {
         title: "Ваш заказ за 48 часов",
         subtitle: "не прибудет - получите бесплатно."
       }
+    },
+    languageSection: {
+      title: "На 8 языках",
+      subtitle: "Учите английский язык",
+      orderButton: "Заказать",
+      bookTitle: "Детский английский",
+      book1: "КНИГА 1",
+      book2: "КНИГА 2",
+      book3: "КНИГА 3"
+    },
+    voicePen: {
+      title: "ГОВОРЯЩАЯ РУЧКА",
+      feature1: "Качественное 3D аудио",
+      feature2: "Без грамматических правил",
+      feature3: "Без зубрежки слов",
+      feature4: "В любом месте и в любое время",
+      orderButton: "Заказать",
+      videoButton: "Смотреть видео",
+      imagePlaceholder: "Говорящая ручка",
+      step1Title: "Оформите заказ на сайте",
+      step1Desc: "",
+      step2Title: "Мы свяжемся с вами",
+      step2Desc: "",
+      step3Title: "Доставим по адресу в течение 48 часов",
+      step3Desc: ""
+    },
+    benefits: {
+      title: "ДЛЯ КОГО ПОЛЕЗЕН РОБОТ-УЧИТЕЛЬ.",
+      subtitle: "Наши курсы полезны всем, кто интересуется этими языками",
+      card1Title: "Семьи с большим количеством детей и внуков",
+      card1Desc: "множество детей могут учиться с помощью одного набора",
+      card2Title: "Родители, уставшие от оплаты курсов",
+      card2Desc: "",
+      card3Title: "Тем, кто ищет решение расходов на курсы",
+      card3Desc: "",
+      card4Title: "Изучение мировых языков от носителей",
+      card4Desc: "(native speaker)",
+      card5Title: "Интересные игры, упражнения и песни",
+      card5Desc: "для тех, кто хочет учиться через них."
     }
   },
   en: {
@@ -99,6 +177,45 @@ export const translations = {
         title: "Your order in 48 hours",
         subtitle: "or get it for free."
       }
+    },
+    languageSection: {
+      title: "In 8 languages",
+      subtitle: "Learn English",
+      orderButton: "Order now",
+      bookTitle: "Children English",
+      book1: "BOOK 1",
+      book2: "BOOK 2",
+      book3: "BOOK 3"
+    },
+    voicePen: {
+      title: "VOICE PEN",
+      feature1: "Quality 3D audio",
+      feature2: "No grammar rules",
+      feature3: "No word memorization",
+      feature4: "Anywhere and anytime",
+      orderButton: "Order now",
+      videoButton: "Watch video",
+      imagePlaceholder: "Voice pen",
+      step1Title: "Place an order on the website",
+      step1Desc: "",
+      step2Title: "We will contact you",
+      step2Desc: "",
+      step3Title: "Delivery to your address within 48 hours",
+      step3Desc: ""
+    },
+    benefits: {
+      title: "WHO BENEFITS FROM ROBOT TEACHER.",
+      subtitle: "Our courses are useful for everyone interested in these languages",
+      card1Title: "Families with many children and grandchildren",
+      card1Desc: "many children can learn with just one set",
+      card2Title: "Parents tired of paying for courses",
+      card2Desc: "",
+      card3Title: "Those looking for solution to course expenses",
+      card3Desc: "",
+      card4Title: "Learning world languages from native speakers",
+      card4Desc: "(native speaker)",
+      card5Title: "Interesting games, exercises and songs",
+      card5Desc: "for those who want to learn through them."
     }
   }
 };
