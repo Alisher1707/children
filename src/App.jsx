@@ -20,6 +20,7 @@ import Notes from './pages/Notes';
 import NoteDetail from './pages/NoteDetail';
 import AddNote from './pages/AddNote';
 import BookDetail from './pages/BookDetail';
+import BookReader from './pages/BookReader';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/notes/:id" element={<NoteDetail />} />
         <Route path="/add-note" element={<AddNote />} />
         <Route path="/book/:id" element={<BookDetail />} />
+        <Route path="/book/:id/read" element={<BookReader />} />
       </Routes>
     </BrowserRouter>
   );

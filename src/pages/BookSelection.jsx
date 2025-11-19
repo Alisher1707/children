@@ -29,7 +29,7 @@ const BookSelection = () => {
         </button>
 
         {/* Header */}
-        <div className="px-8 pt-16 pb-4">
+        <div className="px-8 pt-16 pb-4 text-center">
           <h1 className="text-gray-900 text-xl font-semibold">
             {t('bookSelection.home')}
           </h1>

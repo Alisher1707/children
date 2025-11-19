@@ -107,7 +107,10 @@ const BookDetail = () => {
           </div>
 
           {/* Read Book Button */}
-          <button className="w-full bg-white text-blue-600 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
+          <button
+            onClick={() => navigate(`/book/${id}/read`)}
+            className="w-full bg-white text-blue-600 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors"
+          >
             Читать книгу
           </button>
         </div>
