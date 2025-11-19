@@ -45,24 +45,24 @@ const VoicePenSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
+    <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Voice Pen Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16" style={{ marginBottom: '120px' }}>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-16 mb-12 lg:mb-32">
           {/* Left side - Image */}
-          <div className="relative flex-shrink-0 flex items-start gap-0 scale-75 sm:scale-90 lg:scale-100">
+          <div className="relative flex-shrink-0 flex items-start gap-0 scale-90 sm:scale-95 lg:scale-100">
             {/* Video button */}
-            <button className="z-20 bg-purple-700 text-white rounded-full flex items-center gap-2 sm:gap-3 shadow-lg hover:bg-purple-800 transition-all mt-16 sm:mt-24 px-4 sm:px-0" style={{ backgroundColor: '#6B4FA0', width: '200px', height: '50px', paddingLeft: '20px' }}>
-              <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center">
-                <svg className="w-5 h-5 text-purple-700 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+            <button className="z-20 bg-purple-700 text-white rounded-full flex items-center gap-2 shadow-lg hover:bg-purple-800 transition-all mt-12 sm:mt-16 lg:mt-24 px-3 sm:px-4 lg:px-0 w-44 sm:w-48 lg:w-52 h-11 sm:h-12 lg:h-14 pl-3 sm:pl-4 lg:pl-5" style={{ backgroundColor: '#6B4FA0' }}>
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-700 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </div>
-              <span className="text-sm sm:text-base font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>{t('voicePen.videoButton')}</span>
+              <span className="text-xs sm:text-sm lg:text-base font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>{t('voicePen.videoButton')}</span>
             </button>
 
             {/* Circular background with concentric circles */}
-            <div className="w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full flex items-center justify-center relative -ml-6 sm:-ml-8" style={{ background: 'linear-gradient(135deg, #E98F8E 0%, #EEAE8C 100%)' }}>
+            <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full flex items-center justify-center relative -ml-4 sm:-ml-6 lg:-ml-8" style={{ background: 'linear-gradient(135deg, #E98F8E 0%, #EEAE8C 100%)' }}>
               {/* Wave effect */}
               <div className="absolute inset-0 rounded-full flex items-center justify-center">
                 <svg className="w-full h-full" viewBox="0 0 380 380">
@@ -87,60 +87,60 @@ const VoicePenSection = () => {
               </div>
 
               {/* Voice pen image */}
-              <div className="z-10 relative -mt-16 sm:-mt-20 lg:-mt-24 -ml-6 sm:-ml-8">
-                <img src="/images/ruchka.png" alt={t('voicePen.imagePlaceholder')} className="w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transform -rotate-[18deg]" />
+              <div className="z-10 relative -mt-12 sm:-mt-16 lg:-mt-24 -ml-4 sm:-ml-6 lg:-ml-8">
+                <img src="/images/ruchka.png" alt={t('voicePen.imagePlaceholder')} className="w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transform -rotate-[18deg]" />
               </div>
             </div>
           </div>
 
           {/* Right side - Text and features */}
-          <div className="flex flex-col items-center lg:items-start flex-1 text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8" style={{ color: '#5B4891', fontFamily: 'Inter, sans-serif' }}>
+          <div className="flex flex-col items-center lg:items-start flex-1 text-center lg:text-left w-full">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8" style={{ color: '#5B4891', fontFamily: 'Inter, sans-serif' }}>
               {t('voicePen.title')}
             </h2>
 
             {/* Features list */}
-            <div className="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
+            <div className="space-y-3 sm:space-y-4 lg:space-y-5 mb-6 sm:mb-8 lg:mb-10 w-full">
               {features.map((feature) => (
-                <div key={feature.id} className="flex items-start gap-3 sm:gap-4 justify-center lg:justify-start">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <div key={feature.id} className="flex items-start gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-purple-600 mt-0.5 sm:mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                  <p className="text-gray-700 text-base sm:text-lg lg:text-xl" style={{ fontFamily: 'Inter, sans-serif' }}>{feature.text}</p>
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-xl" style={{ fontFamily: 'Inter, sans-serif' }}>{feature.text}</p>
                 </div>
               ))}
             </div>
 
             {/* Button */}
-            <button className="text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-semibold text-sm sm:text-base shadow-lg transition-all" style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
+            <button className="text-white px-6 sm:px-8 lg:px-10 py-2.5 sm:py-3 lg:py-3.5 rounded-full font-semibold text-xs sm:text-sm lg:text-base shadow-lg transition-all w-full sm:w-auto" style={{ background: 'linear-gradient(to right, #8F2ADC, #D351B9)' }}>
               {t('voicePen.orderButton')}
             </button>
           </div>
         </div>
 
         {/* Steps Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {steps.map((step) => (
             <div
               key={step.id}
-              className="rounded-3xl p-5 sm:p-6 text-white shadow-xl relative overflow-hidden"
-              style={{ background: step.bgColor, minHeight: '140px' }}
+              className="rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 text-white shadow-xl relative overflow-hidden"
+              style={{ background: step.bgColor, minHeight: '120px' }}
             >
               {/* Decorative pattern */}
               <div className="absolute bottom-0 right-0 opacity-10">
-                <div className="transform scale-150">
+                <div className="transform scale-125 sm:scale-150">
                   {step.icon}
                 </div>
               </div>
 
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="mb-2">
-                  <div className="w-10 h-10">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10">
                     {step.icon}
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold" style={{ fontFamily: 'Nunito, sans-serif' }}>
+                  <h3 className="text-xs sm:text-sm lg:text-base font-bold" style={{ fontFamily: 'Nunito, sans-serif' }}>
                     {step.id}. {step.title}
                   </h3>
                 </div>
