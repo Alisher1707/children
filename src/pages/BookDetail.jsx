@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const BookDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const [selectedLanguage, setSelectedLanguage] = useState('russian');
+  const { language, changeLanguage } = useLanguage();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const books = [
@@ -16,13 +17,13 @@ const BookDetail = () => {
   const book = books.find(b => b.id === parseInt(id));
 
   const languages = [
-    { value: 'russian', label: 'Русский язык', flag: 'https://flagcdn.com/w40/ru.png' },
-    { value: 'uzbek', label: "O'zbek tili", flag: 'https://flagcdn.com/w40/uz.png' },
-    { value: 'english', label: 'English', flag: 'https://flagcdn.com/w40/gb.png' },
+    { value: 'ru', label: 'Русский язык', flag: 'https://flagcdn.com/w40/ru.png' },
+    { value: 'uz', label: "O'zbek tili", flag: 'https://flagcdn.com/w40/uz.png' },
+    { value: 'en', label: 'English', flag: 'https://flagcdn.com/w40/gb.png' },
   ];
 
   return (
-    <div className="h-screen bg-gradient-to-b from-[#0099FF] to-[#0077CC] flex items-center justify-center p-4 overflow-hidden">
+    <div className="h-screen bg-white flex items-center justify-center p-4 overflow-hidden">
       <div className="w-full max-w-sm bg-gradient-to-b from-[#0099FF] to-[#0077CC] shadow-2xl relative flex flex-col" style={{ height: 'calc(100vh - 2rem)' }}>
         {/* Back button */}
         <button
@@ -70,11 +71,11 @@ const BookDetail = () => {
             >
               <span className="flex items-center gap-2">
                 <img
-                  src={languages.find(l => l.value === selectedLanguage)?.flag}
+                  src={languages.find(l => l.value === language)?.flag}
                   alt="flag"
                   className="w-6 h-4 object-cover"
                 />
-                <span>{languages.find(l => l.value === selectedLanguage)?.label}</span>
+                <span>{languages.find(l => l.value === language)?.label}</span>
               </span>
               <svg className={`w-5 h-5 text-gray-400 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -88,7 +89,7 @@ const BookDetail = () => {
                   <button
                     key={lang.value}
                     onClick={() => {
-                      setSelectedLanguage(lang.value);
+                      changeLanguage(lang.value);
                       setIsDropdownOpen(false);
                     }}
                     className="w-full px-4 py-3 flex items-center gap-2 hover:bg-gray-50 transition-colors text-left"
