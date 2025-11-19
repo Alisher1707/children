@@ -44,6 +44,7 @@ const BookSelection = () => {
             {books.map((book) => (
               <div
                 key={book.id}
+                onClick={() => navigate(`/book/${book.id}`)}
                 className="bg-gray-50 rounded-xl p-4 flex items-center justify-between hover:bg-gray-100 transition-all cursor-pointer"
               >
                 <div className="flex items-center gap-4">

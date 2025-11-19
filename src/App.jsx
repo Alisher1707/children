@@ -19,6 +19,7 @@ import AppLanguage from './pages/AppLanguage';
 import Notes from './pages/Notes';
 import NoteDetail from './pages/NoteDetail';
 import AddNote from './pages/AddNote';
+import BookDetail from './pages/BookDetail';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/notes" element={<Notes />} />
         <Route path="/notes/:id" element={<NoteDetail />} />
         <Route path="/add-note" element={<AddNote />} />
+        <Route path="/book/:id" element={<BookDetail />} />
       </Routes>
     </BrowserRouter>
   );
