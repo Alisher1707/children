@@ -16,6 +16,9 @@ import Settings from './pages/Settings';
 import EditProfile from './pages/EditProfile';
 import UserAgreement from './pages/UserAgreement';
 import AppLanguage from './pages/AppLanguage';
+import Notes from './pages/Notes';
+import NoteDetail from './pages/NoteDetail';
+import AddNote from './pages/AddNote';
 
 function App() {
   return (
@@ -44,6 +47,9 @@ function App() {
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/agreement" element={<UserAgreement />} />
         <Route path="/app-language" element={<AppLanguage />} />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/notes/:id" element={<NoteDetail />} />
+        <Route path="/add-note" element={<AddNote />} />
       </Routes>
     </BrowserRouter>
   );
