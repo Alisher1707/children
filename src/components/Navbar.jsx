@@ -25,10 +25,9 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 sticky top-0 z-50" style={{ fontFamily: 'Inter, sans-serif' }}>
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-[70px]">
+      <div className="max-w-7xl mx-auto flex items-center h-[70px]">
         {/* Mobile Navigation - Left side */}
-        <div className="lg:hidden">
-          {/* Logo */}
+        <div className="lg:hidden flex-1">
           <h1 className="text-2xl font-bold" style={{ color: '#FF6B9D' }}>LOGO</h1>
         </div>
 
@@ -100,55 +99,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Left side - Logo and Language */}
-        <div className="hidden lg:flex items-center gap-10">
-          <div>
-            <h1 className="text-2xl font-bold" style={{ color: '#FF6B9D' }}>LOGO</h1>
-          </div>
-
-          <div className="relative">
-            <button
-              className="flex items-center gap-1 text-gray-800 text-sm font-medium bg-transparent border-none cursor-pointer py-2 hover:text-gray-600 transition-colors"
-              onClick={() => toggleDropdown('language')}
-            >
-              {languageLabels[language]}
-              <svg className={`w-3 h-3 text-gray-400 transition-transform duration-300 ${activeDropdown === 'language' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {activeDropdown === 'language' && (
-              <ul className="absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg list-none mt-2 py-2 min-w-[100px] z-[1001]">
-                <li>
-                  <button
-                    onClick={() => handleLanguageChange('uz')}
-                    className="w-full text-left block px-5 py-3 text-gray-800 no-underline text-sm hover:bg-gray-50 transition-colors bg-transparent border-none cursor-pointer"
-                  >
-                    Uzb
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleLanguageChange('ru')}
-                    className="w-full text-left block px-5 py-3 text-gray-800 no-underline text-sm hover:bg-gray-50 transition-colors bg-transparent border-none cursor-pointer"
-                  >
-                    Рус
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleLanguageChange('en')}
-                    className="w-full text-left block px-5 py-3 text-gray-800 no-underline text-sm hover:bg-gray-50 transition-colors bg-transparent border-none cursor-pointer"
-                  >
-                    Eng
-                  </button>
-                </li>
-              </ul>
-            )}
-          </div>
-        </div>
-
-        {/* Center menu */}
-        <ul className="hidden lg:flex list-none m-0 p-0 gap-10 items-center">
+        {/* Center menu - shifted left */}
+        <ul className="hidden lg:flex list-none m-0 p-0 gap-10 items-center flex-1 ml-8">
           <li className="relative">
             <a href="#" className="text-gray-800 text-sm font-medium no-underline py-2 hover:text-gray-600 transition-colors">
               {t('navbar.home')}
@@ -200,8 +152,50 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Right side - Contact button */}
-        <div className="hidden lg:flex items-center">
+        {/* Right side - Language and Contact button */}
+        <div className="hidden lg:flex items-center gap-6">
+          {/* Language selector */}
+          <div className="relative">
+            <button
+              className="flex items-center gap-1 text-gray-800 text-sm font-medium bg-transparent border-none cursor-pointer py-2 hover:text-gray-600 transition-colors"
+              onClick={() => toggleDropdown('language')}
+            >
+              {languageLabels[language]}
+              <svg className={`w-3 h-3 text-gray-400 transition-transform duration-300 ${activeDropdown === 'language' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {activeDropdown === 'language' && (
+              <ul className="absolute top-full right-0 bg-white border border-gray-200 rounded-lg shadow-lg list-none mt-2 py-2 min-w-[100px] z-[1001]">
+                <li>
+                  <button
+                    onClick={() => handleLanguageChange('uz')}
+                    className="w-full text-left block px-5 py-3 text-gray-800 no-underline text-sm hover:bg-gray-50 transition-colors bg-transparent border-none cursor-pointer"
+                  >
+                    Uzb
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleLanguageChange('ru')}
+                    className="w-full text-left block px-5 py-3 text-gray-800 no-underline text-sm hover:bg-gray-50 transition-colors bg-transparent border-none cursor-pointer"
+                  >
+                    Рус
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleLanguageChange('en')}
+                    className="w-full text-left block px-5 py-3 text-gray-800 no-underline text-sm hover:bg-gray-50 transition-colors bg-transparent border-none cursor-pointer"
+                  >
+                    Eng
+                  </button>
+                </li>
+              </ul>
+            )}
+          </div>
+
+          {/* Contact button */}
           <button
             onClick={() => setIsModalOpen(true)}
             className="bg-white border-2 rounded-full px-6 py-2.5 text-sm font-medium cursor-pointer transition-all whitespace-nowrap hover:bg-gray-50"
