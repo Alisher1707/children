@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 sticky top-0 z-50">
+    <nav className="w-full bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 sticky top-0 z-50" style={{ fontFamily: 'Inter, sans-serif' }}>
       <div className="max-w-7xl mx-auto flex justify-between items-center h-[70px]">
         {/* Hamburger menu button for mobile */}
         <button

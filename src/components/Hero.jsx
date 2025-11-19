@@ -30,16 +30,16 @@ const Hero = () => {
           {/* Left content */}
           <div className="flex-1 z-10 text-center lg:text-left">
             {/* Main heading */}
-            <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
+            <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
               {t('hero.title')}
             </h1>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight" style={{ color: '#FFD89C' }}>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight" style={{ color: '#FFD89C', fontFamily: 'Inter, sans-serif' }}>
               {t('hero.discount')} <span className="text-white">{t('hero.subtitle')}</span>
             </h2>
 
             {/* Description */}
-            <p className="text-white text-sm sm:text-base mb-6 leading-relaxed opacity-90">
+            <p className="text-white text-sm sm:text-base mb-6 leading-relaxed opacity-90" style={{ fontFamily: 'Inter, sans-serif' }}>
               {t('hero.description')}
             </p>
 
