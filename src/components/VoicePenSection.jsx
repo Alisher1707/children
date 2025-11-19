@@ -48,7 +48,7 @@ const VoicePenSection = () => {
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-50 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Voice Pen Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 mb-12 lg:mb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16" style={{ marginBottom: '120px' }}>
           {/* Left side - Image */}
           <div className="relative flex-shrink-0 flex items-start gap-0 scale-75 sm:scale-90 lg:scale-100">
             {/* Video button */}

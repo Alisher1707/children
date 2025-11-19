@@ -11,7 +11,7 @@ const AudioCoursesSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-purple-50">
+    <section className="px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-purple-50" style={{ paddingTop: '3rem', paddingBottom: '120px' }}>
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl font-bold mb-10 sm:mb-16 text-center" style={{ color: '#5B4891' }}>

@@ -20,20 +20,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 rounded-3xl mx-4 sm:mx-6 lg:mx-8"
       style={{
-        background: 'linear-gradient(135deg, #6B4E9B 0%, #8B5A9E 50%, #9D6B9E 100%)'
+        background: 'linear-gradient(135deg, #544695 0%, #754088 100%)'
       }}>
 
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           {/* Left content */}
           <div className="flex-1 z-10 text-center lg:text-left">
-            {/* Discount badge */}
-            <div className="inline-block mb-3">
-              <img src="/svg/10% chegirma svg.svg" alt="10% chegirma" className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16" />
-            </div>
-
             {/* Main heading */}
             <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
               {t('hero.title')}
@@ -78,6 +73,11 @@ const Hero = () => {
           {/* Right side - Books display */}
           <div className="flex-1 flex flex-col items-center justify-center relative w-full lg:w-auto">
             <div className="relative scale-75 sm:scale-90 lg:scale-100">
+              {/* 10% Discount badge */}
+              <div className="absolute left-0 sm:left-2 z-40" style={{ top: '0' }}>
+                <img src="/svg/10%25%20chegirma.svg" alt="10% chegirma" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24" />
+              </div>
+
               {/* Book images */}
               <div className="relative w-[280px] sm:w-[320px] h-[240px] sm:h-[280px]">
                 {books.map((book, index) => (

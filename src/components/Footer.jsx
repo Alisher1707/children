@@ -11,9 +11,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white border-t border-gray-200 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
+    <footer className="bg-white border-t border-gray-200 px-4 sm:px-6 lg:px-8" style={{ height: '240px', display: 'flex', alignItems: 'center' }}>
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4" style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
           {/* Left side - Navigation */}
           <nav className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 md:gap-10">
             <a href="#" className="text-gray-700 hover:text-gray-900 transition-colors text-sm sm:text-base">

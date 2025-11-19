@@ -1,57 +1,91 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const TestimonialsSection = () => {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   const testimonials = [
     {
       id: 1,
-      name: "Abduyaminov Akmal",
+      name: "Abdullaev Javohir",
       book: t('testimonials.book1'),
       text: t('testimonials.text1'),
-      avatar: "/images/avatar1.jpg"
+      avatar: "/images/testimonals.png"
     },
     {
       id: 2,
-      name: "Abduyaminov Akmal",
+      name: "Karimova Gulnora",
       book: t('testimonials.book1'),
       text: t('testimonials.text1'),
-      avatar: "/images/avatar2.jpg"
+      avatar: "/images/testimonals-women.jpg"
     },
     {
       id: 3,
-      name: "Abduyaminov Akmal",
+      name: "Toshmatov Jasur",
       book: t('testimonials.book1'),
       text: t('testimonials.text1'),
-      avatar: "/images/avatar3.jpg"
+      avatar: "/images/testimonals-man2.jpg"
+    },
+    {
+      id: 4,
+      name: "Rahimova Dilnoza",
+      book: t('testimonials.book1'),
+      text: t('testimonials.text1'),
+      avatar: "/images/testimonals-women2.jpg"
+    },
+    {
+      id: 5,
+      name: "Alimov Sardor",
+      book: t('testimonials.book1'),
+      text: t('testimonials.text1'),
+      avatar: "/images/testimonals-man1.jpg"
     }
   ];
 
+  useEffect(() => {
+    if (currentIndex === testimonials.length) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setIsTransitioning(true);
+          });
+        });
+      }, 500);
+    } else if (currentIndex === -1) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(testimonials.length - 1);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setIsTransitioning(true);
+          });
+        });
+      }, 500);
+    }
+  }, [currentIndex, testimonials.length]);
+
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    if (isTransitioning) {
+      setCurrentIndex((prev) => prev + 1);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const getVisibleTestimonials = () => {
-    const visible = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % testimonials.length;
-      visible.push(testimonials[index]);
+    if (isTransitioning) {
+      setCurrentIndex((prev) => prev - 1);
     }
-    return visible;
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white mb-12 sm:mb-20">
+    <section className="px-4 sm:px-6 lg:px-8 bg-white" style={{ paddingTop: '3rem', paddingBottom: '3rem', marginTop: '120px', marginBottom: '60px' }}>
       <div className="max-w-6xl mx-auto">
         {/* Header with navigation */}
         <div className="flex justify-between items-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-[#8F2ADC] to-[#D351B9] bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold" style={{ color: '#544695' }}>
             {t('testimonials.title')}
           </h2>
 
@@ -89,18 +123,25 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-          {getVisibleTestimonials().map((testimonial, index) => (
-            <div
-              key={`${testimonial.id}-${index}`}
-              className="bg-purple-50 rounded-2xl p-5 sm:p-6 transition-all duration-300 min-h-[180px] sm:min-h-[200px]"
-            >
+        <div className="overflow-hidden">
+          <div
+            className={`flex gap-4 sm:gap-6 ${isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''}`}
+            style={{ transform: `translateX(calc(-${currentIndex * 33.333}% - ${currentIndex * 1.5}rem))` }}
+          >
+            {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
+              <div
+                key={`${testimonial.id}-${index}`}
+                className="bg-purple-50 rounded-2xl p-5 sm:p-6 min-h-[180px] sm:min-h-[200px] flex-shrink-0"
+                style={{ width: 'calc(33.333% - 1rem)' }}
+              >
               {/* User info */}
               <div className="flex items-start gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 overflow-hidden flex-shrink-0">
-                  <div className="w-full h-full bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center text-purple-700 font-bold text-base sm:text-lg">
-                    {testimonial.name.charAt(0)}
-                  </div>
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="font-bold text-sm sm:text-base text-gray-800">{testimonial.name}</h3>
@@ -114,6 +155,7 @@ const TestimonialsSection = () => {
               </p>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>
