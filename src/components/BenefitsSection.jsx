@@ -92,7 +92,7 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white font-inter">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col gap-4 sm:gap-6">
           {/* Top row - 3 cards */}

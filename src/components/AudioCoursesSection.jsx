@@ -67,19 +67,19 @@ const AudioCoursesSection = () => {
           {/* Left Card - Discount */}
           <div className="md:w-[58%] rounded-3xl p-6 sm:p-8 relative overflow-hidden flex flex-col justify-between min-h-[350px] sm:min-h-[400px]" style={{ backgroundColor: '#c4e1f3' }}>
             <div className="relative z-10">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4" style={{ color: '#5B4891' }}>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 font-nunito" style={{ color: '#5B4891' }}>
                 {t('audioCourses.discountTitle')}
-                <span className="text-3xl sm:text-5xl ml-2" style={{ color: '#FF6B6B' }}>10%</span>
+                <span className="text-3xl sm:text-5xl ml-2 font-nunito" style={{ color: '#FF6B6B' }}>10%</span>
               </h3>
 
-              <p className="text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
+              <p className="text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2 font-inter">
                 {t('audioCourses.discountStart')}: <span className="font-bold">25 mart</span>
               </p>
-              <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6">
+              <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6 font-inter">
                 {t('audioCourses.discountEnd')}: <span className="font-bold">24 aprel</span>
               </p>
 
-              <p className="text-base sm:text-lg font-bold mb-2" style={{ color: '#5B4891' }}>
+              <p className="text-base sm:text-lg font-bold mb-2 font-inter" style={{ color: '#5B4891' }}>
                 {t('audioCourses.priceLabel')}
               </p>
               <p className="text-gray-400 line-through text-lg sm:text-xl mb-1">
@@ -124,7 +124,7 @@ const AudioCoursesSection = () => {
           {/* Right Card - Form */}
           <div className="md:w-[42%] rounded-3xl p-6 sm:p-8 flex flex-col justify-between min-h-[350px] sm:min-h-[400px]" style={{ backgroundColor: '#c4e1f3ff' }}>
             <div>
-              <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6" style={{ color: '#5B4891' }}>
+              <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 font-nunito" style={{ color: '#5B4891' }}>
                 {t('audioCourses.formTitle')}
               </h3>
 
@@ -151,7 +151,7 @@ const AudioCoursesSection = () => {
                     id="agreement"
                     className="mt-1"
                   />
-                  <label htmlFor="agreement" className="text-xs sm:text-sm text-gray-600">
+                  <label htmlFor="agreement" className="text-xs sm:text-sm text-gray-600 font-inter">
                     {t('audioCourses.agreement')}
                   </label>
                 </div>

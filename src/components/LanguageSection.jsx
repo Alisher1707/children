@@ -80,10 +80,10 @@ const LanguageSection = () => {
 
           {/* Left side - Title, flags and button */}
           <div className="flex flex-col items-start w-full lg:w-auto lg:flex-1">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 leading-tight" style={{ color: '#5B4891' }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 leading-tight" style={{ color: '#5B4891', fontFamily: 'Inter, sans-serif' }}>
               {t('languageSection.title')}
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg mb-8">{t('languageSection.subtitle')}</p>
+            <p className="text-gray-600 text-base sm:text-lg mb-8" style={{ fontFamily: 'Inter, sans-serif' }}>{t('languageSection.subtitle')}</p>
 
             {/* Language flags grid - 4 columns, 2 rows */}
             <div className="grid grid-cols-4 gap-4 sm:gap-5 mb-10 w-full max-w-xs">
@@ -110,7 +110,7 @@ const LanguageSection = () => {
               <div
                 key={book.id}
                 className="rounded-3xl p-7 flex flex-col items-center shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-                style={{ backgroundColor: book.bgColor, width: '100%', maxWidth: '260px' }}
+                style={{ backgroundColor: book.bgColor, width: '240px' }}
               >
                 <div className="mb-5">
                   <img src={book.image} alt={book.title} className="w-44 h-52 object-contain" />

@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header with navigation */}
         <div className="flex justify-between items-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold" style={{ color: '#544695' }}>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-inter" style={{ color: '#544695' }}>
             {t('testimonials.title')}
           </h2>
 
@@ -144,13 +144,13 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm sm:text-base text-gray-800">{testimonial.name}</h3>
-                  <p className="text-xs sm:text-sm text-purple-600">{testimonial.book}</p>
+                  <h3 className="font-bold text-sm sm:text-base text-gray-800 font-inter">{testimonial.name}</h3>
+                  <p className="text-xs sm:text-sm font-inter" style={{ color: '#544695' }}>{testimonial.book}</p>
                 </div>
               </div>
 
               {/* Review text */}
-              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
+              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed font-inter">
                 {testimonial.text}
               </p>
             </div>

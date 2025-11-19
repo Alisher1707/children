@@ -58,7 +58,7 @@ export const translations = {
       step3Desc: ""
     },
     benefits: {
-      title: "ROBOT USTOZ KIMLAR UCHUN FOYDALI.",
+      title: "ROBOT USTOZ KIMLAR UCHUN FOYDALI",
       subtitle: "Barcha yoshdagi shu tillarga qiziqadigan barchaga kurslarimiz foydali bo'ladi",
       card1Title: "Farzandlari va nevaralari ko'p bo'lgan oilalar",
       card1Desc: "uchun atiga bitta to'plam orqali ko'plab bolalar o'rganishi mumkin",
