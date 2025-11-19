@@ -92,13 +92,23 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white font-inter">
+    <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white font-inter">
       <div className="max-w-6xl mx-auto">
+        {/* Title - Mobile only */}
+        <div className="md:hidden mb-6">
+          <h2 className="text-xl font-bold mb-2 leading-tight" style={{ color: '#5B4891' }}>
+            {t('benefits.title')}
+          </h2>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            {t('benefits.subtitle')}
+          </p>
+        </div>
+
         <div className="flex flex-col gap-4 sm:gap-6">
           {/* Top row - 3 cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            {/* Title card */}
-            <div className="rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+            {/* Title card - Desktop only */}
+            <div className="hidden md:block rounded-3xl p-6 sm:p-8 relative overflow-hidden">
               <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 leading-tight" style={{ color: '#5B4891' }}>
                 {t('benefits.title')}
               </h2>
@@ -111,27 +121,27 @@ const BenefitsSection = () => {
             {benefits.slice(0, 2).map((benefit) => (
               <div
                 key={benefit.id}
-                className="rounded-3xl p-6 sm:p-8 relative overflow-hidden transition-transform duration-300 hover:scale-105 shadow-lg"
-                style={{ backgroundColor: benefit.bgColor, minHeight: '240px' }}
+                className="rounded-3xl p-5 sm:p-6 lg:p-8 relative overflow-hidden transition-transform duration-300 hover:scale-105 shadow-lg"
+                style={{ backgroundColor: benefit.bgColor, minHeight: '200px' }}
               >
                 {/* Decorative icon in background */}
                 <div className="absolute bottom-4 right-4 opacity-10" style={{ color: benefit.iconColor }}>
-                  <div className="w-24 h-24 sm:w-32 sm:h-32">{benefit.decorativeIcon}</div>
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32">{benefit.decorativeIcon}</div>
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="mb-3 sm:mb-4" style={{ color: benefit.iconColor }}>
-                    <div className="w-12 h-12 sm:w-16 sm:h-16">{benefit.icon}</div>
+                  <div className="mb-3" style={{ color: benefit.iconColor }}>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16">{benefit.icon}</div>
                   </div>
                   {benefit.id === 2 ? (
-                    <h3 className="text-base sm:text-lg mb-2 sm:mb-3">
+                    <h3 className="text-sm sm:text-base lg:text-lg mb-2">
                       <span className="font-bold" style={{ color: benefit.iconColor }}>{benefit.title}</span>
                       {' '}
                       <span className="text-gray-700 font-normal">{t('benefits.card2Title2')}</span>
                     </h3>
                   ) : (
-                    <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3" style={{ color: benefit.iconColor }}>
+                    <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2" style={{ color: benefit.iconColor }}>
                       {benefit.title}
                     </h3>
                   )}
@@ -150,20 +160,20 @@ const BenefitsSection = () => {
             {benefits.slice(2, 5).map((benefit) => (
               <div
                 key={benefit.id}
-                className="rounded-3xl p-6 sm:p-8 relative overflow-hidden transition-transform duration-300 hover:scale-105 shadow-lg"
-                style={{ backgroundColor: benefit.bgColor, minHeight: '240px' }}
+                className="rounded-3xl p-5 sm:p-6 lg:p-8 relative overflow-hidden transition-transform duration-300 hover:scale-105 shadow-lg"
+                style={{ backgroundColor: benefit.bgColor, minHeight: '200px' }}
               >
                 {/* Decorative icon in background */}
                 <div className="absolute bottom-4 right-4 opacity-10" style={{ color: benefit.iconColor }}>
-                  <div className="w-24 h-24 sm:w-32 sm:h-32">{benefit.decorativeIcon}</div>
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32">{benefit.decorativeIcon}</div>
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="mb-3 sm:mb-4" style={{ color: benefit.iconColor }}>
-                    <div className="w-12 h-12 sm:w-16 sm:h-16">{benefit.icon}</div>
+                  <div className="mb-3" style={{ color: benefit.iconColor }}>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16">{benefit.icon}</div>
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3" style={{ color: benefit.iconColor }}>
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2" style={{ color: benefit.iconColor }}>
                     {benefit.title}
                   </h3>
                   <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">

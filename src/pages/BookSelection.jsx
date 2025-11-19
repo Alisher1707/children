@@ -1,102 +1,120 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../context/LanguageContext';
 
 const BookSelection = () => {
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const books = [
-    { id: 1, title: 'Children English', image: '/images/kitob-1.png' },
-    { id: 2, title: 'Children English', image: '/images/kitob-2.png' },
-    { id: 3, title: 'Children English', image: '/images/kitob-3.png' },
+    { id: 1, title: 'Children English', subtitle: 'BOOK 1', image: '/images/kitob-1.png', bgColor: '#E8F4FF' },
+    { id: 2, title: 'Children English', subtitle: 'BOOK 2', image: '/images/kitob-2.png', bgColor: '#FFE8E0' },
+    { id: 3, title: 'Children English', subtitle: 'BOOK 3', image: '/images/kitob-3.png', bgColor: '#E8F4FF' },
   ];
 
-  const handleBack = () => {
-    navigate('/user-data');
+  const languages = [
+    { code: 'en', flag: '🇬🇧' },
+    { code: 'uz', flag: '🇺🇿' },
+    { code: 'ru', flag: '🇷🇺' },
+    { code: 'ar', flag: '🇸🇦' },
+    { code: 'fr', flag: '🇫🇷' },
+    { code: 'ko', flag: '🇰🇷' },
+    { code: 'es', flag: '🇪🇸' },
+    { code: 'zh', flag: '🇨🇳' },
+  ];
+
+  const nextBook = () => {
+    setCurrentIndex((prev) => (prev + 1) % books.length);
   };
 
+  const prevBook = () => {
+    setCurrentIndex((prev) => (prev - 1 + books.length) % books.length);
+  };
+
+  const getVisibleBooks = () => {
+    const first = books[currentIndex];
+    const second = books[(currentIndex + 1) % books.length];
+    return [first, second];
+  };
+
+  const visibleBooks = getVisibleBooks();
+
   return (
-    <div className="h-screen bg-gradient-to-b from-[#0099FF] to-[#0077CC] flex items-center justify-center p-4 overflow-hidden">
-      <div className="w-full max-w-sm bg-white shadow-2xl relative flex flex-col" style={{ height: 'calc(100vh - 2rem)' }}>
-        {/* Back button */}
-        <button
-          onClick={handleBack}
-          className="absolute top-6 left-6 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-all z-10"
-        >
-          <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex items-center justify-center p-4">
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-6 sm:p-8">
         {/* Header */}
-        <div className="px-8 pt-16 pb-4 text-center">
-          <h1 className="text-gray-900 text-xl font-semibold">
-            {t('bookSelection.home')}
+        <div className="mb-6">
+          <h1 className="text-gray-800 text-xl sm:text-2xl font-bold mb-2">
+            TEST - 8ta tilda
           </h1>
-        </div>
+          <p className="text-gray-600 text-sm sm:text-base mb-4">
+            Ingliz tilini o'rganing
+          </p>
 
-        {/* Books section */}
-        <div className="flex-1 overflow-y-auto px-8 py-4">
-          <h2 className="text-gray-900 text-base font-semibold mb-4">
-            {t('bookSelection.title')}
-          </h2>
-          <div className="space-y-3">
-            {books.map((book) => (
+          {/* Buy Button */}
+          <button
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-full mb-6 transition-all shadow-lg"
+            onClick={() => navigate('/order')}
+          >
+            Buyurtma berish
+          </button>
+
+          {/* Language Flags */}
+          <div className="flex justify-between items-center">
+            {languages.map((lang) => (
               <div
-                key={book.id}
-                onClick={() => navigate(`/book/${book.id}`)}
-                className="bg-gray-50 rounded-xl p-4 flex items-center justify-between hover:bg-gray-100 transition-all cursor-pointer"
+                key={lang.code}
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-md flex items-center justify-center text-xl sm:text-2xl cursor-pointer hover:scale-110 transition-transform border border-gray-200"
               >
-                <div className="flex items-center gap-4">
-                  <img
-                    src={book.image}
-                    alt={book.title}
-                    className="w-16 h-20 object-cover rounded-lg"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/64x80?text=Book';
-                    }}
-                  />
-                  <span className="text-blue-600 text-base font-medium">
-                    {book.title}
-                  </span>
-                </div>
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                {lang.flag}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom Navigation */}
-        <div className="bg-white border-t border-gray-200 px-6 py-4">
-          <div className="flex justify-around items-center">
-            {/* Home */}
-            <button className="flex flex-col items-center gap-1 text-blue-600">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              <span className="text-xs font-medium">{t('bookSelection.home')}</span>
-            </button>
+        {/* Books Display */}
+        <div className="flex flex-col items-center py-6">
+          {/* Books Container - 2 books side by side */}
+          <div className="flex gap-3 sm:gap-4 mb-6">
+            {visibleBooks.map((book, index) => (
+              <div
+                key={book.id}
+                onClick={() => navigate(`/book/${book.id}`)}
+                className="flex flex-col items-center cursor-pointer transform hover:scale-105 transition-all rounded-2xl p-3 sm:p-4 shadow-lg"
+                style={{ backgroundColor: book.bgColor }}
+              >
+                <div className="mb-2">
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="w-28 h-36 sm:w-32 sm:h-40 object-contain rounded-lg"
+                    onError={(e) => {
+                      e.target.src = 'https://via.placeholder.com/128x160?text=Book';
+                    }}
+                  />
+                </div>
+                <p className="text-gray-800 text-xs sm:text-sm font-semibold text-center">{book.title}</p>
+                <p className="text-gray-600 text-xs font-medium">{book.subtitle}</p>
+              </div>
+            ))}
+          </div>
 
-            {/* Notes */}
-            <button className="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <span className="text-xs font-medium">{t('bookSelection.notes')}</span>
-            </button>
-
-            {/* Settings */}
+          {/* Navigation Arrows */}
+          <div className="flex gap-3">
             <button
-              onClick={() => navigate('/settings')}
-              className="flex flex-col items-center gap-1 text-gray-400 hover:text-gray-600"
+              onClick={prevBook}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-gray-50 hover:border-gray-400 transition-all"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="text-xs font-medium">{t('bookSelection.settings')}</span>
+            </button>
+            <button
+              onClick={nextBook}
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-gray-50 hover:border-gray-400 transition-all"
+            >
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
         </div>
